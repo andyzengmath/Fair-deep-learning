@@ -1,0 +1,42 @@
+\section{Related Work}
+\subsection{FairFace paper \cite{krkkinen2019fairface}}
+
+Findings: Shows that most of the current and commonly-used face datasets are biased toward white faces and against faces of color. In order to address this racial bias and to provide more consistent training accuracy across racial/ethnic groups, the authors construct a novel large-scale face dataset with class balance among seven ethnic groups, called FairFace. 
+
+\noindent Relevance: Our project utilizes this FairFace dataset for training and validation data.
+
+\subsection{Review on The Effects of Age, Gender, and Race Demographics on Automatic Face Recognition \cite{abdurrahim2017review}}
+
+Findings: Recognition accuracy of automatic face recognition models differs across gender, race, and age, and more strongly across interactions of these demographics. In particular, recognition accuracies of males and older people are greater than those of females and younger people.
+
+\noindent Relevance: This paper identifies the current biases with respect to face recognition models, and what the sensitive groups of interest are.
+
+\subsection{Deep Learning for Face Recognition: A Critical Analysis \cite{shepley2019deep}}
+
+Findings: Contains a review of different methodologies (models, loss function, number of neural networks) for face recognition, as well as available databases. Notes, importantly, that the best models have extremely high computational cost and require large databases to provide good results.
+
+\noindent Relevance: This paper identifies which deep learning face recognition models perform the best, which will be helpful for our group when it comes to designing our own model. It also had information on the effectiveness of the IMDB-Faces dataset, as well as the UTKFaces dataset, which overlaps significantly with FairFace.
+
+\subsection{Fairness Criteria for Face Recognition Applications \cite{michalsky2019fair}}
+
+Findings: Found that CNN classifier was biased against non-white individuals for gender classification despite passing standard fairness metrics. Adding confidence criteria and identifying a minimal test sample size can improve fairness.
+
+\noindent Relevance: This paper is extremely relevant to our project, as it deals with the exact same subject: model fairness with respect to face recognition. It discusses some ways to improve fairness, which we can potentially use in our model design.
+
+\subsection{Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification \cite{buolamwini2018gendershades}}
+
+Findings: While commercially-used gender-classification deep learning tools (i.e. IBM, Microsoft, and Face++) provided high classification performance on average, their error rates are significantly different across groups.  Notably all of these tools had the worst performance when it came to classifying images of darker-skinned females over other combinations of skin color and ethnicity.
+
+
+\noindent Relevance: This is one of the key papers that study group fairness in computer vision. Our project may contribute to this research, by proposing a way to improve group fairness in facial recognition and classification.
+
+
+\subsection{Fairness-aware Learning through Regularization Approach \cite{6137441}}
+Findings: Identifies three causes of unfairness in machine learning (specifically, regression and classification): prejudice, underestimation, and negative legacy. All of these causes are studied by building corresponding models on a class $Y$, a sensitive feature $X$, and a non-sensitive feature $S$. The author also proposed a method to remove unfairness caused by indirect prejudice, which uses regularization.
+
+\noindent Relevance: This is an theory-inclined paper which identifies causes of unfairness and the tools to identified them. We can adapt its method directly into group fairness problem into deep learning, though it is not clear whether this might be helpful for individual fairness problems we proposed such as facial recognition. Also, the idea that how to convert definition of unfairness into statistical model and the construction of metric on quantifying the unfairness is helpful.
+
+\subsection{Right for the Right Reasons: Training Differentiable Models by Constraining their Explanations \cite{ijcai2017-371}} 
+Findings: In training classifiers with data that are full of ambiguities, we often use regularization to narrow down choices and encourage robustness in order to get high accuracy. We usually also employ domain-specific knowledge to assist our model. However, these methods may not generalize well due to confounding in the data set, leading to a "right model for the wrong reasons." The author built methods which can effectively explain and regularize differentiable models by using techniques that selectively penalize input gradient.
+
+\noindent Relevance: This is a more application-inclined paper, aiming for a "right model for the right reasons." This paper is useful for us since its technique of regularizing on specific attributes is aligned with one of our novel methods.
